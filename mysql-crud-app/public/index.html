@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng Nhập / Đăng Ký - Hệ Thống Quản Lý Sinh Viên</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <h2 id="auth-title">Đăng Nhập</h2>
+      <p id="auth-subtitle">Hệ Thống Quản Lý Sinh Viên</p>
+      
+      <!-- Alert Message -->
+      <div id="alert-box" class="alert hidden"></div>
+
+      <!-- Login Form -->
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login-username">Tên đăng nhập</label>
+          <input type="text" id="login-username" required placeholder="Nhập tên đăng nhập (ví dụ: admin)">
+        </div>
+        <div class="form-group">
+          <label for="login-password">Mật khẩu</label>
+          <input type="password" id="login-password" required placeholder="Nhập mật khẩu (ví dụ: admin123)">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Đăng Nhập</button>
+        <p class="auth-switch">Chưa có tài khoản? <a href="#" id="show-register">Đăng ký ngay</a></p>
+      </form>
+
+      <!-- Register Form (Hidden by default) -->
+      <form id="register-form" class="hidden">
+        <div class="form-group">
+          <label for="register-fullname">Họ và tên</label>
+          <input type="text" id="register-fullname" required placeholder="Nhập họ và tên">
+        </div>
+        <div class="form-group">
+          <label for="register-username">Tên đăng nhập</label>
+          <input type="text" id="register-username" required placeholder="Tên đăng nhập mới">
+        </div>
+        <div class="form-group">
+          <label for="register-password">Mật khẩu</label>
+          <input type="password" id="register-password" required placeholder="Mật khẩu mới">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Đăng Ký</button>
+        <p class="auth-switch">Đã có tài khoản? <a href="#" id="show-login">Đăng nhập</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
